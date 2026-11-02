@@ -4,6 +4,10 @@ A dependency-free HTML sample for Azure App Service Builder. Builder publishes
 the contents of `public/` directly: there is no build step, Oryx platform, or
 running server in the deployment. `serve.mjs` is only a local development helper.
 
+## Preview
+
+![Static HTML sample with an oversized greeting, rose accents, and an illustrative HTML source sheet](https://github.com/user-attachments/assets/e6537c29-7808-4c3c-90d7-fc93b8aa5b9e)
+
 **Private Preview:** use this sample for development and testing only. Live
 end-to-end qualification is pending; local checks do not establish that GitHub
 authorization or deployment works in your selected preview environment.
