@@ -33,7 +33,7 @@ sample does not establish regional availability or production service guarantees
 
 ### Installation
 
-Fork [this repository](https://github.com/Azure-Samples/app-service-builder-static-html/fork)
+Fork [this repository](https://github.com/AzureAppService/app-service-builder-static-html/fork)
 to your own GitHub account so you can push changes. Clone your fork, replacing
 `<your-github-account>` with its owner:
 
