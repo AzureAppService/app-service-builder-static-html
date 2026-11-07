@@ -9,6 +9,12 @@ import { runInNewContext } from 'node:vm';
 import test from 'node:test';
 import { setTimeout } from 'node:timers/promises';
 
+test('README documentation links use the canonical docs host', async () => {
+  const readme = await readFile(new URL('README.md', import.meta.url), 'utf8');
+  assert.match(readme, /https:\/\/builder\.appservice\.azure\.com\/docs\//);
+  assert.doesNotMatch(readme, /https:\/\/builderapps\.azure\.com\/docs(?:\/|\b)/);
+});
+
 test('the static manifest uses the default public URL mount', async () => {
   assert.equal(await readFile(new URL('builder.yaml', import.meta.url), 'utf8'),
     'components:\n  - name: site\n    role: static\n    output: public\n');

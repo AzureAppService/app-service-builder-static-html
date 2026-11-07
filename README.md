@@ -94,7 +94,7 @@ test or live preview deployment.
 
 ### Deploy your fork with Builder Portal
 
-Follow the [Portal quickstart](https://builderapps.azure.com/docs/quickstarts/portal/)
+Follow the [Portal quickstart](https://builder.appservice.azure.com/docs/quickstarts/portal/)
 for your authorized Private Preview environment:
 
 1. Open Builder Portal and select the existing subscription and resource group
@@ -130,7 +130,7 @@ by this sample.
 This plain HTML sample does not read environment variables. Saving variables
 does not substitute values into its static assets; even **Save and deploy**
 does not add HTML templating. See the
-[variables guide](https://builderapps.azure.com/docs/guides/variables/) for
+[variables guide](https://builder.appservice.azure.com/docs/guides/variables/) for
 Portal behavior. Never put credentials in public assets.
 
 ### Cleanup
@@ -148,10 +148,10 @@ The local helper, tests, and README are outside the deployed `public/` directory
 
 ## Resources
 
-* [App Service Builder documentation](https://builderapps.azure.com/docs/)
-* [Portal quickstart](https://builderapps.azure.com/docs/quickstarts/portal/)
-* [Sample catalog](https://builderapps.azure.com/docs/samples/)
-* [Variables guide](https://builderapps.azure.com/docs/guides/variables/)
+* [App Service Builder documentation](https://builder.appservice.azure.com/docs/)
+* [Portal quickstart](https://builder.appservice.azure.com/docs/quickstarts/portal/)
+* [Sample catalog](https://builder.appservice.azure.com/docs/samples/)
+* [Variables guide](https://builder.appservice.azure.com/docs/guides/variables/)
 * [Contributing](CONTRIBUTING.md)
 * [Microsoft Open Source Code of Conduct](.github/CODE_OF_CONDUCT.md)
 * [MIT license](LICENSE.md)
