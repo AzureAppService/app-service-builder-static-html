@@ -75,7 +75,10 @@
       }
       html[data-theme="dark"] body { --cp-text-muted: var(--cp-text-soft); }
       a { color: inherit; }
-      a:focus-visible { outline: 3px solid var(--cp-accent); outline-offset: 6px; }
+      a:focus-visible, button:focus-visible { outline: 3px solid var(--cp-accent); outline-offset: 6px; }
+      button.action { border: 0; font: inherit; cursor: pointer; }
+      button:disabled { opacity: .7; cursor: wait; }
+      #health-status { font-size: 14px; line-height: 1.6; max-width: 55ch; color: var(--cp-text-muted); }
       .shell { width: min(1248px, calc(100% - 96px)); margin-inline: auto; }
       .masthead {
         display: flex;
@@ -205,7 +208,8 @@
         <div>
           <h1 id="greeting">Simply static.<span>Ready to say hello.</span></h1>
           <p class="intro">Hello from a browser-ready static sample.</p>
-          <a class="action" href="/health">Health check <span aria-hidden="true">&rarr;</span></a>
+          <button class="action" type="button" data-health-check data-health-path="/health">Check app health</button>
+          <p id="health-status" role="status" aria-live="polite">Checks the static health file, not Azure services.</p>
         </div>
         <figure class="source">
           <div class="source-heading"><code>public/index.html</code><span>HTML</span></div>
@@ -231,10 +235,29 @@
           <p>The static <code>/health</code> asset returns <code>OK</code>.</p>
         </div>
       </section>
+      <p>To customize this page, edit <code>public/index.html</code> in your own source repository, then deploy that commit. <a href="https://builder.appservice.azure.com/docs/">Builder documentation</a></p>
     </main>
     <footer class="shell">
       <p>App Service Builder / static-html</p>
       <p><strong>Private Preview</strong> &mdash; For development and testing only. Live end-to-end qualification is pending.</p>
     </footer>
+    <script>
+      const button = document.querySelector('[data-health-check]');
+      const status = document.querySelector('#health-status');
+      button.addEventListener('click', async () => {
+        button.disabled = true;
+        status.textContent = 'Checking this app...';
+        try {
+          const response = await fetch('/health', { cache: 'no-store', signal: AbortSignal.timeout(5000) });
+          if (!response.ok) throw new Error('HTTP ' + response.status);
+          if ((await response.text()).trim() !== 'OK') throw new Error('Unexpected health response');
+          status.textContent = 'Healthy: /health returned HTTP 200 and OK. Static-file liveness only.';
+        } catch (error) {
+          status.textContent = 'Health check failed: ' + error.message + '. Retry the check.';
+        } finally {
+          button.disabled = false;
+        }
+      });
+    </script>
   </body>
 </html>

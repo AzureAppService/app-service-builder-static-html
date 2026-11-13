@@ -112,7 +112,8 @@ test('the static sample runs from an independent root', { timeout: 15000 }, asyn
   const html = await readFile(join(root, 'public/index.html'), 'utf8');
   assert.match(html, /App Service Builder \/ static-html/);
   assert.match(html, /Hello from a browser-ready static sample\./);
-  assert.match(html, /href="\/health"/);
+  assert.match(html, /data-health-path="\/health"/);
+  assert.match(html, /id="health-status" role="status"/);
 
   for (const path of ['/missing', '/builder.yaml', '/serve.mjs']) {
     const response = await fetch(`http://127.0.0.1:8080${path}`);

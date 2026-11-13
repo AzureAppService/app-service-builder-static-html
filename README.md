@@ -6,7 +6,9 @@ running server in the deployment. `serve.mjs` is only a local development helper
 
 ## Preview
 
-![Static HTML sample with an oversized greeting, rose accents, and an illustrative HTML source sheet](https://github.com/user-attachments/assets/e6537c29-7808-4c3c-90d7-fc93b8aa5b9e)
+![Static HTML root page with a rose-accented greeting, HTML specimen, and in-page health check](docs/images/sample.png)
+
+Real local rendering in Microsoft Edge, not evidence of an Azure deployment.
 
 **Private Preview:** use this sample for development and testing only. Live
 end-to-end qualification is pending; local checks do not establish that GitHub
@@ -19,8 +21,12 @@ authorization or deployment works in your selected preview environment.
 * A root-level `builder.yaml` that deploys only `public/`.
 * Dependency-free local serving and automated HTTP checks.
 * A responsive showcase with an illustrative HTML source sheet, light and dark
-  color schemes, and a keyboard-accessible health-check link. Styles are inline;
+  color schemes, and a keyboard-accessible in-page health check. Styles are inline;
   no external fonts, images, or runtime dependencies are loaded.
+
+**Check app health** displays the static `/health` response without navigating
+away or downloading it. It confirms static-file liveness only, not Azure health.
+Customization instructions on the page refer to your own source repository.
 
 ## Getting Started
 
