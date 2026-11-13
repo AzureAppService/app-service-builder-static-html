@@ -189,15 +189,16 @@
           to { clip-path: inset(0); }
         }
       }
-    </style>
+
+.shell{max-width:1090px;width:calc(100% - 60px)}body{background:radial-gradient(ellipse at 0 10%,#dceaff,transparent 60%),radial-gradient(ellipse at 100% 90%,#e8e0fa,transparent 60%),#eff3fc;color:#26374f}.masthead{margin-top:36px;background:white;padding:27px 35px;border-radius:23px 23px 0 0;border-bottom:1px solid #e2e8f1}main.shell{padding:0 35px 25px;background:white}.hero{padding-block:43px;gap:40px}.hero h1{font-size:62px;letter-spacing:-.03em}.intro{color:#586c85;font-size:17px}.source{background:#f3f5fe;border:0;border-radius:15px;overflow:hidden}.source-heading,.source-caption{border-color:#dae2f2;color:#596c87}.html-mark{min-height:150px;background:#f5ebe7;color:#b75830}.language-logo{width:95px;height:auto}.code{font-size:12px;color:#49647f}.syntax{color:#936445}.action{background:#aa5434;color:white;border:0;border-radius:10px;min-height:44px;padding:13px 20px}.action:hover{background:#864129}.details{gap:25px;padding:24px 0;border-color:#e2e8f1}.detail p{color:#586c85;font-size:12px}footer.shell{padding:20px 35px;background:#fff;border-radius:0 0 23px 23px;margin-bottom:36px;border-color:#e2e8f1}.brand-logo{width:30px;height:30px}.edition{color:#61718b;font-size:12px}main>p{color:#586c85;font-size:12px;line-height:1.8}#health-status{color:#586c85;font-size:11px}.language-docs{color:#536582;font-size:12px}
+html[data-theme=dark] body{background:#171e30;color:#ecf1ff}html[data-theme=dark] .masthead,html[data-theme=dark] main.shell,html[data-theme=dark] footer.shell{background:#242e43}html[data-theme=dark] .intro,html[data-theme=dark] .detail p,html[data-theme=dark] main>p,html[data-theme=dark] #health-status,html[data-theme=dark] .edition,html[data-theme=dark] .language-docs{color:#bdcbe2}
+@media(max-width:700px){.shell{width:calc(100% - 30px)}.masthead{margin-top:22px;padding:23px 21px;flex-wrap:wrap;gap:15px}main.shell{padding:0 21px 24px}.hero{padding-block:31px;gap:27px}.hero h1{font-size:48px}.html-mark{min-height:120px}.details{gap:22px}footer.shell{padding:19px 21px}.brand{max-width:none}}
+</style>
   </head>
   <body>
     <!--
-      THESIS: An HTML greeting as a typographic specimen, not a generic card grid.
-      OWN-WORLD: Warm paper, charcoal type, rose ink, and a flat source-code sheet.
-      STORY: Read the original greeting, understand the static sample, open /health.
-      FIRST VIEWPORT: Oversized headline left; HTML specimen right; one health link.
-      FORM: Brief-directed editorial composition; existing routes and content retained.
+      THESIS: A language-specific hello-world specimen in the approved soft modern Builder family.
+      FORM: Existing sample functionality and honest health/customization behavior retained.
     -->
     <header class="masthead shell">
       <div class="brand"><svg class="brand-logo" aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -250,7 +251,7 @@
 </clipPath>
 </defs>
 </svg>App Service Builder</div>
-      <span class="edition">static-html</span>
+      <span class="edition">HTML sample for App Service Builder</span><a class="language-docs" href="https://html.spec.whatwg.org/multipage/">HTML documentation ↗</a>
     </header>
     <main class="shell">
       <section class="hero" aria-labelledby="greeting">
@@ -262,7 +263,14 @@
         </div>
         <figure class="source">
           <div class="source-heading"><code>public/index.html</code><span>HTML</span></div>
-          <div class="html-mark" aria-hidden="true">&lt;/&gt;</div>
+          <div class="html-mark"><svg class="language-logo" role="img" aria-label="HTML5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <title>HTML5 Logo Badge</title>
+  <path fill="#E34F26" d="M71,460 L30,0 481,0 440,460 255,512"/>
+  <path fill="#EF652A" d="M256,472 L405,431 440,37 256,37"/>
+  <path fill="#EBEBEB" d="M256,208 L181,208 176,150 256,150 256,94 255,94 114,94 115,109 129,265 256,265zM256,355 L255,355 192,338 188,293 158,293 132,293 139,382 255,414 256,414z"/>
+  <path fill="#FFF" d="M255,208 L255,265 325,265 318,338 255,355 255,414 371,382 372,372 385,223 387,208 371,208zM255,94 L255,129 255,150 255,150 392,150 392,150 392,150 393,138 396,109 397,94z"/>
+</svg>
+</div>
           <pre class="code"><code><span class="syntax">&lt;main&gt;</span>
   Hello from a browser-ready
   static sample.
@@ -289,7 +297,7 @@
     <footer class="shell">
       <p>App Service Builder / static-html</p>
       <p>For development and testing only. Live end-to-end qualification is pending.</p>
-    </footer>
+    <p>HTML5 logo from <a href="https://www.w3.org/html/logo/">the official project</a>; used to identify this sample’s technology.</p></footer>
     <script>
       const button = document.querySelector('[data-health-check]');
       const status = document.querySelector('#health-status');

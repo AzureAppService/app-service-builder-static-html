@@ -6,7 +6,7 @@ running server in the deployment. `serve.mjs` is only a local development helper
 
 ## Preview
 
-![Static HTML root page with a rose-accented greeting, HTML specimen, and in-page health check](docs/images/sample.png)
+![HTML sample with official technology and Builder identity, inline health and source guidance](docs/images/sample.png)
 
 Real local rendering in Microsoft Edge, not evidence of an Azure deployment.
 
@@ -163,3 +163,7 @@ The local helper, tests, and README are outside the deployed `public/` directory
 * [MIT license](LICENSE.md)
 
 The product mark uses the supplied App Service Builder asset in `assets/AppServiceBuilder.svg`. Its SVG is inlined in the root page to preserve the existing routes and security policy. Keep the inline copy and asset in sync when updating the logo.
+
+## Technology identity
+
+The root UI follows the Builder sample family while retaining this sample’s existing learning objective and real health behavior. It includes the official HTML5 logo, a clearly labeled language documentation link, and separate Builder documentation. Original logo source is retained under `assets/`.
