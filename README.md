@@ -161,3 +161,5 @@ The local helper, tests, and README are outside the deployed `public/` directory
 * [Contributing](CONTRIBUTING.md)
 * [Microsoft Open Source Code of Conduct](.github/CODE_OF_CONDUCT.md)
 * [MIT license](LICENSE.md)
+
+The product mark uses the supplied App Service Builder asset in `assets/AppServiceBuilder.svg`. Its SVG is inlined in the root page to preserve the existing routes and security policy. Keep the inline copy and asset in sync when updating the logo.
